@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peluche Saint-Valentin | Page</title>
+    <link rel="stylesheet" href="assets/css/design.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<style>
+    body {
+        overflow-x: hidden;
+        background: url("assets/file_00000000671c71f4831b394db68d81e0.webp");
+    }
+    .header {
+        background: url("assets/file_000000000604722f8fcdd8edce37851c.webp");
+        background-size: cover;
+        height: 100vh;
+        background-position: center;
+        width: 100%;
+    }
+    #logo_text {
+    background-clip: text;
+    background: linear-gradient(to right, #FF1493, #FFFFFF);
+    color: transparent;
+    -webkit-background-clip: text;
+}
+:root {
+    --color:#FF0000;
+    --primary-color: #FF1493;
+    --secondary-color: #FFFFFF;
+    --tertiary-color: ;
+} 
+* {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+#imgsechero {
+    width: 250px;
+    height: 250px;
+    border-radius: 100px;
+}
+#imgpelu {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    animation: rotate 6s linear infinite; 
+}
+@keyframes rotate {
+    from {
+        transform: rotateY(-40deg);
+    }
+    to {
+        transform: rotateY(40deg);
+    }
+}
+#imgpeluvente {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+#h1 {
+    color: #FFFFFF;   
+    font-family:'Courier New', Courier, monospace;
+    letter-spacing: 3px;     
+    font-weight: bold;  
+    font-size: 7vh;                                              
+}
+#h1 strong {
+    font-style: italic;
+    font-family: 'Courier New', Courier, monospace;
+    background-clip: text;
+    background: linear-gradient(to bottom, #FF0000, #FFFFFF);
+    -webkit-background-clip: text;
+    color: transparent;
+    letter-spacing: 2px;
+}
+#p_secthero {
+    font-size: 20px;
+    color: var(--secondary-color);
+}
+#btn_secthero {
+    border: 2px  solid var(--color);
+    background: none;
+    padding: 8px 30px;
+    color: var(--secondary-color);
+    border-radius: 40px;
+    transition: O.3s ease;
+    transition: O.3s ease;
+    transition: all 0.2s ease-in-out;
+}
+#btn_secthero:hover {
+    box-shadow: 0 0 40px #FFFFFF, 0 0 80px #FF1493, 0 0 40px #FF0000;
+    transform: translateY(-20%);
+}
+
+#navbar-navlink .nav-item .nav-link {
+    color: #FFFFFF;
+    letter-spacing: 1px;
+    transition: all 0.3s ease-in-out;
+}
+#navbar-navlink .nav-item .nav-link:hover {
+    background-clip: text;
+    background: linear-gradient(to right, #FF1493, #FFFFFF);
+    -webkit-background-clip: text;
+    color: transparent;
+    padding: 10px 10px;
+    font-weight: bold;
+    font-style: italic;
+    border-bottom: 2px solid;
+}
+.h2 {
+    background-clip: text;
+    background: linear-gradient(to right, #FF0000, #FF1493);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+#why_ul {
+    background: linear-gradient(to right top, #FF0000, #FF1493); 
+}
+#why_ul li {
+    color: #FFFFFF;
+    font-style: oblique;
+    font-weight: bold;
+}
+#av_col {
+    width: 250px;
+    height: 250px;
+    background: linear-gradient(to bottom right, #FF0000, #FF1493, #FF0000);
+    border-radius: 20px;
+}
+#av_col:hover {
+    box-shadow: 10px 10px 20px 20px #FF0000;
+}
+#av_col center {
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 3vh;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#navs {
+    background-color: transparent;
+    border-radius: 30px;
+    backdrop-filter: blur(10px);
+    padding: 10px 30px;
+    overflow: hidden;
+    height: 200px;
+    z-index: 1000;
+}
+#aviss {
+    border-radius: 30px;
+}
+#avis {
+    background-color: #ff149193;
+    border-radius: 30px;
+}
+#actfinal {
+    background: none;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(to right, #FF0000, #FF1493);
+    padding: 18px 30px;
+    transition: all 0.3s ease-in-out;
+}
+#actfinal:hover {
+    box-shadow: 10px 10px 30px 30px #FF0000;
+    transform: translateY(10px);
+}
+footer {
+    padding: 20px;
+    background-color: #FF0000;
+    text-align: center;
+    color: #FFFFFF;
+}
+/* #av_col {
+    position: relative;
+    width: 100px;
+    height: 90px;
+    background: red;
+    transform: rotate(-45deg);
+}
+#av_col:before, #av_col:after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: red;
+    border-radius: 50%;
+}
+#av_col:before {
+    top: -50px;
+    left: 0
+}
+#av_col:after {
+    top: 0;
+    left: 50px;
+} */
+#section_hero {
+    top: 95px;
+    left: 75px;
+    bottom: 0;
+}
+.prix {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 3vh;
+}
+.imgpeluprix {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    transition: all 0.3s ease-in-out;
+}
+.imgpeluprix:hover {
+    scale: 1.2;
+}
+#prixcol {
+    width: 400px;
+    height: auto;
+    margin: auto;
+    background-color: #FF0000;
+    border-radius: 30px;
+    color: #FFFFFF;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    background: linear-gradient(to right top, #FF0000, #FF1493); 
+}
+#prixcol:hover {
+    transform: scaleX(1.1);
+    transform: scaleY(1.1);
+}
+#addpeludiv {
+    margin-top: 10px;
+}
+#addpelu {
+    background: none;
+    border: none;
+}
+@media screen and (max-width: 500px) {
+    * {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 900px) {
+    body {
+        text-align: center;
+    }
+    * {
+        width: 100%;
+    }
+    #p_secthero {
+        font-size: 20px;
+        color: var(--secondary-color);
+        text-align: center;
+        width: 100%;
+    }
+    #h1 {
+        font-size: clamp(24px, 5vw, 48px);
+        display: block;
+    }
+    #section_hero {
+        position: absolute;
+        left: 7px;
+    }
+}
+</style>
+<body>
+    <header class="header position-relative">
+        <section class="header_section">
+
+            <section class="">
+            <section class="adapt">
+                <section class="container">
+                    <br>
+                    <nav class="navbar navbar-expand-lg shadow w-100 h-auto mt-3" id="navs"> 
+
+                            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+                                <i class="fas fa-bars"></i>
+                            </button>
+                            <div class="collapse navbar-collapse gap-5" id="nav">
+                                <a href="" class="navbar navbar-brand gap-1" id="">
+                                    🧸<strong id="logo_text">Peluche Saint-Valentin</strong>
+                                </a>
+                                <ul class="navbar-nav end-0 gap-4" id="navbar-navlink">
+                                    <li class="nav-item">
+                                        <a href="index.html" class="nav-link">Acceuil</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#pqw" class="nav-link">Pourquoi cette peluche ?</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#avt" class="nav-link">Avantages</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">Ce que disent nos clients</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </section>
+                <br>
+                <section class="" id="">
+                    <div class=" p-5 container  position-absolute  row" id="section_hero">
+                        <div class="col flex-column justify-content-center gap-4 p-5 ">
+                            <h1 class="d-lg-block d-md-block d-none" id="h1">
+                                LA PELUCHE QUI DIT  
+                                <strong>
+                                    " JE T'AIME "
+                                </strong>
+                                MIEUX QUE DES MOTS
+                            </h1>
+                            <div class="">
+                                <p class="fst-italic d" id="p_secthero">Offrer un cadeau doux, mignon et remplir d'amour pour une Saint-Valentin inoubliable</p>
+                            </div>
+                            <div class="d-flex justify-content-center pt-3"> 
+                                <button class="" id="btn_secthero"> 
+                                    Offir maintenant 🎁
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col d-lg-block d-sm-none"></div>
+                        <br><br>
+                    </div>
+                </section>
+                <br>
+            </section>
+        </section>
+    </header>
+    <main>
+        <br>
+        <section class="pqw">
+            <br><br>
+            <center class="h2">
+                Pourquoi offrir cette peluche pour la Saint-Valentin ?
+            </center>
+            <center class="p mt-3 fst-italic">La Saint-Valentin, ce n'est pas seulement un cadeau, c'est une attention, une émotion, un souvenir.Offrir cette peluche c'est:</center>
+            <br><br>
+            <div class="">
+                <div class="container whycol">
+                    <ul class="navbar-nav align-items-center justify-content-center shadow-lg p-5 rounded" id="why_ul">
+                        <li class="nav-item">
+                            <strong>
+                                        ❤️
+                            </strong> Montrer son amour de facon tendre et sincère;
+                        </li>
+                        <li class="nav-item mt-4">
+                            <strong>
+                                        ❤️
+                            </strong> Offrir un calin qui dure bien plus qu'une journée;
+                        </li>
+                        <li class="nav-item mt-4">
+                            <strong>
+                                        ❤️
+                            </strong> Créer un souvenir que votre paretenaire gardera lomgtemps.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <center class="p fst-italic mt-5">
+                <strong>Parce qu'un objet doux peut parfois dire beaucoup plus qu'un simple message💕💕.</strong>
+            </center>
+        </section>
+        <br><br>
+        <br><br>
+        <section>
+            <div class="container">
+                <div class="row align-items-center d-lg-flex d-block">
+                    <div class="col imgpelucol">
+                        <div id="imgpelucol">
+                            <img src="assets/file_000000001d28720aa41d4dc0b9195495.webp" alt="" id="imgpelu" class="">
+                        </div>
+                    </div>
+                    <div class="col imgpelucolpres">
+                        <h2 class="h2">Présentation de la peluche </h2>
+                        <br>
+                        <p>
+                            <strong>
+                                <i>
+                                    Cette peluche est concue pour faire fondre les coeurs ❤️
+                                </i>
+                            </strong>
+                        </p>
+                        <ul class="navbar-nav gap-3">
+                            <li class="nav-item">
+                                <u>
+                                    Taille idéale:
+                                </u>
+                                30 cm
+                            </li>
+                            <li class="nav-item">
+                                Matière ultra-douce et agréable au toucher.
+                            </li>
+                            <li class="nav-item">
+                                Finitions soignées et design adorable
+                            </li>
+                            <li class="nav-item">
+                                Parfaite à offrir ou à garder près de soi.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <br><br>
+        <section>
+            <div class="container">
+                <center class="h2">Valeur émotionnelles</center>
+                <div class="">
+                    <ul class="navbar-nav gap-3 d-flex flex-column align-items-center justify-content-center mt-5">
+                        <div class="valcol1">
+                            <li class="nav-item">❤️ Un calin reconfortant quand vous n'etes pas là;</li>
+                            <br>
+                            <li class="nav-item">❤️ Un appel constant de votre amour;</li>
+                        </div>
+                        <br>
+                        <div class="valcol2">
+                            <li class="nav-item">❤️ Un cadeau qui rassure, apaise et fait sourire;</li>
+                            <br>
+                            <li class="nav-item">❤️ Chaque regard posée sur cette peluche rappelle un moment d'amour partagé💞.</li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <br><br>
+        <div class="container">
+            <center class="h2">Prix & Offre spaciale de Saint-Valentin</center>
+            <br><br>
+            <div class="d-flex flex-column align-items-center justify-content-center shadow prixcol" id="prixcol">
+                <div class="">
+                    <img src="assets/file_000000001d28720aa41d4dc0b9195495.webp" class="imgpeluprix" alt="" srcset="">
+                </div>
+                <br>
+                <div class="d-flex flex-column align-items-center p-3" id="prixinfo"> 
+                    <p class="prix">
+                        12.500 FCFA
+                    </p>
+                    <p>
+                    🎁Livraison offerte pour la Saint-Valentin.
+                    </p>
+                    <p>
+                    ⏰Offre valable jusqu'au 14 février seulement.
+                    </p>
+                    <p>
+                        Un petit prix pour un immense sourire.
+                    </p>
+                    <div id="addpeludiv">
+                        <button id="addpelu">
+                            <i class="fas fa-cart-shopping"></i> Ajouter au panier
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br class="avt">
+        <div class="container mt-5">
+            <center class="h2">
+                Pourquoi nous choisir ?
+            </center>
+            <br>
+            <div class="row gap-5">
+                <div class="col shadow p-5 avcol1" id="av_col"> 
+                    <center class="p-5 text-white"> 🚚 Livraison rapide et suivie </center>
+                </div>
+                <div class="col shadow p-5 avcol2" id="av_col">
+                    <center class="p-5 text-white"> 🔒 Paiement 100% sécurisé </center>
+                </div>
+            </div>
+            <center class="p fst-italic mt-3">
+                <strong>Votre satisfaction est notre priorité.</strong>
+            </center>
+        </div>
+        <br><br>
+        <div class="container">
+            <h2 class="text-center h2"> Ce que disent nos clients </h2>
+            <br>
+            <div class="aviscol" id="aviss">
+                <div class="shadow" id="avis">
+                    <ul class="navbar-nav d-flex flex-column justify-content-center gap-4 p-5 ">
+                    <br>
+                        <li class="nav-item">
+                            ⭐⭐⭐⭐⭐, "Ma copine a adoré, elle dort avec tous les soirs."
+                        </li>
+                        <li class="nav-item">
+                            ⭐⭐⭐⭐⭐, "La peluche est encore plus douce que sur les photos."
+                        </li>
+                        <li class="nav-item">
+                            ⭐⭐⭐⭐⭐, "Livraison rapide, cadeau parfait pour la Saint-Valentin."
+                        </li>
+                    <br>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <br>
+        <section>
+            <div class="d-flex flex-column justify-content-center container align-items-center">
+            <center class="h2">
+                <br>
+                Ne laisser pas passer cette occasion
+            </center>
+            <p class="fst-italic ">
+                <strong>
+                    Offrer un cadeau plein de tendresse, d'amour et d'émotion.
+                </strong>
+            </p>
+            <button id="actfinal" class="fst-italic text-white">
+               👉 Commander ma peluche de Saint-Valentin maintenant
+            </button>
+            </div>
+        </section>
+    </main>
+    <br><br>
+    <footer>
+        Copyright 2026 - Peluche Saint-Valentin - Tous droits réservés.
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+
+        gsap.from(".imgpelucol", { 
+            scrollTrigger: {
+                trigger: ".imgpelucol",
+                start: "top bottom",
+                toggleActions:"play none none none"
+            },
+            x: -300,             
+            duration: 1,
+            left: 0,
+            opacity: 0,
+            ease: "power1.in"
+        }); 
+
+        gsap.from(".imgpelucolpres", { 
+            scrollTrigger: {
+                trigger: ".imgpelucolpres",
+                start: "top bottom",
+                toggleActions:"play none none none"
+            },
+            x: 300,             
+            duration: 1,
+            left: 0,
+            opacity: 0,
+            ease: "power1.out"
+        });
+
+        gsap.from(".avcol1", { 
+            scrollTrigger: {
+                trigger: ".avcol1",
+                start: "top bottom",
+                toggleActions:"play none none none"
+            },
+            x: -300,             
+            duration: 1,
+            left: 0,
+            opacity: 0,
+            ease: "power1.out"
+        });
+
+        gsap.from(".avcol2", { 
+            scrollTrigger: {
+                trigger: ".avcol2",
+                start: "top bottom",
+                toggleActions:"play none none none"
+            },
+            x: 300,             
+            duration: 1,
+            left: 0,
+            opacity: 0,
+            ease: "power1.out"
+        });
+
+        gsap.from(".whycol", { 
+            scrollTrigger: {
+                trigger: ".whycol",
+                start: "top bottom",
+                toggleActions:"play none none none"
+            },
+
+            y: 100,             
+            duration: 1,
+            left: 0,
+            opacity: 0,
+            ease: "power1.out"
+        });
+
+        gsap.from(".valcol1", { 
+            scrollTrigger: {
+                trigger: ".valcol1",
+                start: "top bottom",
+                toggleActions:"play none none none"
+            },
+            x: -300,             
+            duration: 1,
+            left: 0,
+            opacity: 0,
+            ease: "power1.out"
+        });
+
+        gsap.from(".valcol2", { 
+            scrollTrigger: {
+                trigger: ".valcol2",
+                start: "top bottom",
+                toggleActions:"play none none none"
+            },
+            x: 300,             
+            duration: 1,
+            left: 0,
+            opacity: 0,
+            ease: "power1.out"
+        });
+
+        gsap.from(".aviscol", { 
+            scrollTrigger: {
+                trigger: ".aviscol",
+                start: "top bottom",
+                toggleActions:"play none none none"
+            },
+            y: 100,           
+            duration: 1,
+            left: 0,
+            opacity: 0,
+            ease: "power1.out"
+        });
+
+        gsap.from(".prixcol", { 
+            scale: 0.3,
+            duration: 1,
+            opacity: 0,
+            ease: "power1.in",
+            scrollTrigger: {
+                trigger: ".prixcol",
+                start: "top 80%",
+                once: true  
+            }
+        });
+
+        
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+    
