@@ -12,6 +12,7 @@
     body {
         overflow-x: hidden;
         background: url("assets/file_00000000671c71f4831b394db68d81e0.webp");
+        width: 100%;
     }
     .header {
         background: url("assets/file_000000000604722f8fcdd8edce37851c.webp");
@@ -44,15 +45,14 @@
     width: 100%;
     height: auto;
     object-fit: contain;
-    animation: rotate 6s linear infinite; 
+    animation: translate 1.5s linear; 
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
 }
-@keyframes rotate {
-    from {
-        transform: rotateY(-40deg);
-    }
-    to {
-        transform: rotateY(40deg);
-    }
+@keyframes translate {
+    0% { transform: translateY(20px);}
+    50% { transform: translateY(3px);}
+    100% { transform: translateY(20px);}
 }
 #imgpeluvente {
     width: 100%;
@@ -237,11 +237,42 @@ footer {
 }
 #addpelu {
     background: none;
-    border: none;
+    border: 1px solid #FF0000;
+    padding: 10px 10px;
+    border-radius: 30px;
+    font-style: italic;
+    transition: all 0.4s ease-in-out;
+}
+#addpelu:hover {
+    box-shadow: 5px 5px 8px 8px #FFFFFF;
+    transform: translateY(-10px);
 }
 @media screen and (max-width: 500px) {
     * {
         width: 100%;
+    }
+    body {
+        overflow-x: hidden;
+    }
+    #p_secthero {
+        font-size: auto;
+        color: var(--secondary-color);
+        text-align: center;
+        width: 100%;
+    }
+    #av_col {
+        margin: auto;
+        width: 100%;
+    }
+    #av_col center {
+        font-size: 15px;
+    }
+    #av_row {
+        margin: auto;
+    }
+    #prixcol {
+        width: 100%;
+        height: auto;
     }
 }
 @media screen and (max-width: 900px) {
@@ -264,6 +295,21 @@ footer {
     #section_hero {
         position: absolute;
         left: 7px;
+        width: 100%;
+    }
+    #av_col {
+        margin: auto;
+        width: 100%;
+    }
+    #av_col center {
+        font-size: 15px;
+    }
+    #av_row {
+        margin: auto;
+    }
+    #prixcol {
+        width: 100%;
+        height: auto;
     }
 }
 </style>
@@ -313,7 +359,7 @@ footer {
                                 </strong>
                                 MIEUX QUE DES MOTS
                             </h1>
-                            <div class="">
+                            <div class="w-100">
                                 <p class="fst-italic d" id="p_secthero">Offrer un cadeau doux, mignon et remplir d'amour pour une Saint-Valentin inoubliable</p>
                             </div>
                             <div class="d-flex justify-content-center pt-3"> 
@@ -462,12 +508,12 @@ footer {
                 Pourquoi nous choisir ?
             </center>
             <br>
-            <div class="row gap-5">
+            <div class="row gap-5" id="av_row">
                 <div class="col shadow p-5 avcol1" id="av_col"> 
-                    <center class="p-5 text-white"> 🚚 Livraison rapide et suivie </center>
+                    <center class="p-4 text-white"> 🚚 Livraison rapide et suivie </center>
                 </div>
                 <div class="col shadow p-5 avcol2" id="av_col">
-                    <center class="p-5 text-white"> 🔒 Paiement 100% sécurisé </center>
+                    <center class="p-4 text-white"> 🔒 Paiement 100% sécurisé </center>
                 </div>
             </div>
             <center class="p fst-italic mt-3">
@@ -529,7 +575,7 @@ footer {
             scrollTrigger: {
                 trigger: ".imgpelucol",
                 start: "top bottom",
-                toggleActions:"play none none none"
+                toggleActions:"play reverse play reverse"
             },
             x: -300,             
             duration: 1,
@@ -542,7 +588,7 @@ footer {
             scrollTrigger: {
                 trigger: ".imgpelucolpres",
                 start: "top bottom",
-                toggleActions:"play none none none"
+                toggleActions:"play reverse play reverse"
             },
             x: 300,             
             duration: 1,
@@ -555,7 +601,7 @@ footer {
             scrollTrigger: {
                 trigger: ".avcol1",
                 start: "top bottom",
-                toggleActions:"play none none none"
+                toggleActions:"play reverse play reverse"
             },
             x: -300,             
             duration: 1,
@@ -568,7 +614,7 @@ footer {
             scrollTrigger: {
                 trigger: ".avcol2",
                 start: "top bottom",
-                toggleActions:"play none none none"
+                toggleActions:"play reverse play reverse"
             },
             x: 300,             
             duration: 1,
@@ -581,7 +627,7 @@ footer {
             scrollTrigger: {
                 trigger: ".whycol",
                 start: "top bottom",
-                toggleActions:"play none none none"
+                toggleActions:"play reverse play reverse"
             },
 
             y: 100,             
@@ -595,7 +641,7 @@ footer {
             scrollTrigger: {
                 trigger: ".valcol1",
                 start: "top bottom",
-                toggleActions:"play none none none"
+                toggleActions:"play reverse play reverse"
             },
             x: -300,             
             duration: 1,
@@ -608,7 +654,7 @@ footer {
             scrollTrigger: {
                 trigger: ".valcol2",
                 start: "top bottom",
-                toggleActions:"play none none none"
+                toggleActions:"play reverse play reverse"
             },
             x: 300,             
             duration: 1,
@@ -621,7 +667,7 @@ footer {
             scrollTrigger: {
                 trigger: ".aviscol",
                 start: "top bottom",
-                toggleActions:"play none none none"
+                toggleActions:"play reverse play reverse"
             },
             y: 100,           
             duration: 1,
@@ -637,7 +683,7 @@ footer {
             ease: "power1.in",
             scrollTrigger: {
                 trigger: ".prixcol",
-                start: "top 80%",
+                start: "top 60%",
                 once: true  
             }
         });
