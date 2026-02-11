@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Peluche Saint-Valentin | Page</title>
     <link rel="stylesheet" href="assets/css/design.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.min.css">
@@ -45,7 +45,7 @@
     width: 100%;
     height: auto;
     object-fit: contain;
-    animation: translate 1.5s linear; 
+    animation: translate 1.9s linear; 
     animation-iteration-count: infinite;
     animation-timing-function: ease-out;
 }
@@ -311,6 +311,9 @@ footer {
         width: 100%;
         height: auto;
     }
+    #btn_secthero {
+        color: black;
+    }
 }
 </style>
 <body>
@@ -478,7 +481,7 @@ footer {
             <br><br>
             <div class="d-flex flex-column align-items-center justify-content-center shadow prixcol" id="prixcol">
                 <div class="">
-                    <img src="assets/file_000000001d28720aa41d4dc0b9195495.webp" class="imgpeluprix" alt="" srcset="">
+                    <img src="assets/file_000000001d28720aa41d4dc0b9195495.webp" class="imgpeluprix" alt="" loading="lazy">
                 </div>
                 <br>
                 <div class="d-flex flex-column align-items-center p-3" id="prixinfo"> 
@@ -564,10 +567,10 @@ footer {
     <footer>
         Copyright 2026 - Peluche Saint-Valentin - Tous droits réservés.
     </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
-    <script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/js/bootstrap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js" defer></script>
+    <script defer>
         gsap.registerPlugin(ScrollTrigger);
 
 
@@ -575,7 +578,7 @@ footer {
             scrollTrigger: {
                 trigger: ".imgpelucol",
                 start: "top bottom",
-                toggleActions:"play reverse play reverse"
+                toggleActions:"play reverse none none"
             },
             x: -300,             
             duration: 1,
@@ -588,7 +591,7 @@ footer {
             scrollTrigger: {
                 trigger: ".imgpelucolpres",
                 start: "top bottom",
-                toggleActions:"play reverse play reverse"
+                toggleActions:"play reverse none none"
             },
             x: 300,             
             duration: 1,
@@ -601,7 +604,7 @@ footer {
             scrollTrigger: {
                 trigger: ".avcol1",
                 start: "top bottom",
-                toggleActions:"play reverse play reverse"
+                toggleActions:"play reverse none none"
             },
             x: -300,             
             duration: 1,
@@ -614,7 +617,7 @@ footer {
             scrollTrigger: {
                 trigger: ".avcol2",
                 start: "top bottom",
-                toggleActions:"play reverse play reverse"
+                toggleActions:"play reverse none none"
             },
             x: 300,             
             duration: 1,
@@ -627,7 +630,7 @@ footer {
             scrollTrigger: {
                 trigger: ".whycol",
                 start: "top bottom",
-                toggleActions:"play reverse play reverse"
+                toggleActions:"play reverse none none"
             },
 
             y: 100,             
@@ -641,7 +644,7 @@ footer {
             scrollTrigger: {
                 trigger: ".valcol1",
                 start: "top bottom",
-                toggleActions:"play reverse play reverse"
+                toggleActions:"play reverse none none"
             },
             x: -300,             
             duration: 1,
@@ -654,7 +657,7 @@ footer {
             scrollTrigger: {
                 trigger: ".valcol2",
                 start: "top bottom",
-                toggleActions:"play reverse play reverse"
+                toggleActions:"play reverse none none"
             },
             x: 300,             
             duration: 1,
@@ -667,7 +670,7 @@ footer {
             scrollTrigger: {
                 trigger: ".aviscol",
                 start: "top bottom",
-                toggleActions:"play reverse play reverse"
+                toggleActions:"play reverse none none"
             },
             y: 100,           
             duration: 1,
